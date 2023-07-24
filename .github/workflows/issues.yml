@@ -9,4 +9,4 @@ jobs:
       - name: Output github issue details
         env:
           GITHUB_CTX: ${{ toJSON(github) }}
-        run: echo "The event $GITHUB_CTX.event.issue.title triggered this workflow"
+        run: echo "The event ${{GITHUB_CTX.event.issue.title}} triggered this workflow"
