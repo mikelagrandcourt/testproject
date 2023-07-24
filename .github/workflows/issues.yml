@@ -7,4 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output github issue details
-        run: echo "${{ toJSON(github) }}"
+        env:
+          GITHUB_CTX: ${{ toJSON(github) }}
+        run: echo "The event $GITHUB_CTX.event.issue.title triggered this workflow"
