@@ -1,0 +1,10 @@
+name: Issues
+on:
+  issues:
+    types: [opened]
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output github issue details
+        uses: echo "${{ toJSON(github) }}"
