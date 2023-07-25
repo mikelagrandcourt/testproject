@@ -5,6 +5,7 @@ on:
       artifact-name:
         description: The name of the deployable artifact files
         required: true
+        type: string
 jobs:
   deploy:
     runs-on: ubuntu-latest
